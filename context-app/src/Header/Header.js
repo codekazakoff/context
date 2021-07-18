@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 
-import { Context } from "../Context/User";
+import { userContext } from "../Context/UserClass";
 
 const Header = () => {
-  const { user } = useContext(Context);
+  const [user] = useContext(userContext);
 
   return (
     <div>

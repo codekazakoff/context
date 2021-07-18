@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 
-import { Context } from "./Context/User";
+import { userContext } from "./Context/UserClass";
 
 const User = () => {
-  const { user, setUser } = useContext(Context);
+  const [user, setUser] = useContext(userContext);
 
   console.log(user);
 

@@ -5,12 +5,12 @@ export const Context = createContext();
 const UserContext = (props) => {
   const [data, setData] = useState({
     name: "Wokhrux",
-    age: 19,   
+    age: 19,
     jobs: "developer",
   });
 
   return (
-    <Context.Provider value={{ user: data, setUser: setData }}>
+    <Context.Provider value={[data, setData]}>
       {props.children}
     </Context.Provider>
   );
