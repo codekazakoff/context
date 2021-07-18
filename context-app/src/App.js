@@ -1,19 +1,13 @@
-import { createContext, useState } from "react";
-import User from "./User";
-
-export const Context = createContext();
+import UserContext from "./Context/User";
+import Header from "./Header/Header";
+import List from "./List";
 
 const App = () => {
-  const [data, setData] = useState({
-    name: "Wokhrux",
-    age: 19,
-    jobs: "developer",
-  });
-
   return (
-    <Context.Provider value={{ user: data, setUser: setData }}>
-      <User />
-    </Context.Provider>
+    <UserContext>
+      <Header />
+      <List />
+    </UserContext>
   );
 };
 

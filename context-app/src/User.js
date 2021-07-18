@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { Context } from "./App";
+import { Context } from "./Context/User";
 
 const User = () => {
   const { user, setUser } = useContext(Context);
@@ -9,10 +9,11 @@ const User = () => {
 
   return (
     <div>
-      <p>{user.name}</p>
-
       <button onClick={() => setUser((prev) => ({ ...prev, name: "ali" }))}>
-        Change User
+        Change Name Ali
+      </button>
+      <button onClick={() => setUser((prev) => ({ ...prev, name: "Wokhrux" }))}>
+        Change Name Wokhrux
       </button>
     </div>
   );
