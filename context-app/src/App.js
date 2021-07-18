@@ -27,9 +27,18 @@ class App extends Component {
       age: 22,
     },
   };
+
+  update = (obj) => {
+    this.setState({
+      data: obj,
+    });
+  };
+
   render() {
     return (
-      <ClassContextProvider value={[this.state.data]}>
+      <ClassContextProvider
+        value={{ user: this.state.data, update: this.update }}
+      >
         <ClassUser />
       </ClassContextProvider>
     );
